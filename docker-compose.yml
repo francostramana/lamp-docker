@@ -5,9 +5,9 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-     - "8080:80"
+     - 8080:80
     volumes:
-     - .:/var/www/html
+     - ../:/var/www/html
     depends_on:
       - mysqldb
 
@@ -18,16 +18,24 @@ services:
       - ./mysqldb:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_USER: tudai
-      MYSQL_PASSWORD: tudai
+      MYSQL_ROOT_PASSWORD: tudai
+      
 
   myadmin:
     image: "phpmyadmin/phpmyadmin"
     environment:
       mysql_db_server: mysqldb
-      PMA_USER: tudai
+      PMA_USER: root
       PMA_PASSWORD: tudai
     ports:
       - 8081:80
+    depends_on:
+      - mysqldb
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8083:8080
     depends_on:
       - mysqldb
