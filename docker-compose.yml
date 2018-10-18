@@ -24,7 +24,7 @@ services:
   myadmin:
     image: "phpmyadmin/phpmyadmin"
     environment:
-      mysql_db_server: mysqldb
+      PMA_HOST: mysqldb
       PMA_USER: root
       PMA_PASSWORD: tudai
     ports:
