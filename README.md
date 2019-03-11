@@ -1,4 +1,4 @@
-#LAMP Server with Docker ;)
+# LAMP Server with Docker ;)
 
 Simple LAMP Server using multiple containers.
 
@@ -11,10 +11,6 @@ Simple LAMP Server using multiple containers.
 
 ## Getting started
 
-The app must be in the same directory level that this repo. E.g.
-
-root
-| docker/
-|_ index.php
+The app must be in the same directory level that this repo. 
 
 TO BE CONTINUED...
