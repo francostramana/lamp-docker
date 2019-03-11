@@ -18,7 +18,7 @@ services:
       - ./mysqldb:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: tudai
+      MYSQL_ROOT_PASSWORD: root
       
 
   myadmin:
@@ -26,7 +26,7 @@ services:
     environment:
       PMA_HOST: mysqldb
       PMA_USER: root
-      PMA_PASSWORD: tudai
+      PMA_PASSWORD: root
     ports:
       - 8081:80
     depends_on:
