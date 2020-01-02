@@ -50,3 +50,5 @@ Both database managers are exposed in different ports:
 
 
 This project was created for educational purposes. Any contribution is welcome!
+
+Happy coding! 💙
