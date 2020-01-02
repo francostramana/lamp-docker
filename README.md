@@ -1,4 +1,4 @@
-# LAMP Web Server with Docker
+# Docker LAMP Web Server
 
 Simple LAMP Web Server using multiple containers.
 
