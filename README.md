@@ -1,6 +1,6 @@
-# LAMP Server with Docker ;)
+# LAMP Web Server with Docker
 
-Simple LAMP Server using multiple containers.
+Simple LAMP Web Server using multiple containers.
 
 ## Services
 
@@ -9,8 +9,44 @@ Simple LAMP Server using multiple containers.
 * PHPMyAdmin (phpmyadmin/phpmyadmin)
 * Adminer (adminer)
 
-## Getting started
+## Usage
 
 The app must be in the same directory level that this repo. 
 
-TO BE CONTINUED...
+```
+app
+|_ /lamp-server-docker
+|_ hello_world.php
+```
+
+Run compose command inside *repo folder* (sudo is probably required)
+
+```
+docker-compose up
+```
+
+Open `localhost:8080` and Walah :)
+
+### MySQL Access
+These are the database access data. These can be changed from *.yml* file.
+
+```
+MYSQL_HOST: mysqldb
+MYSQL_ROOT_PASSWORD: root
+```
+
+For example, if you want to connect from PHP using PDO:
+
+```
+$this->db_connection = new PDO('mysql:host=mysqldb;dbname=db_name;charset=utf8', 'root', 'root');
+```
+
+## Database Management 
+Both database managers are exposed in different ports:
+
+* PHPMyAdmin: `localhost:8081`
+* Adminer: `localhost:8083`
+
+
+
+This project was created for educational purposes. Any contribution is welcome!
