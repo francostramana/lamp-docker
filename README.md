@@ -25,7 +25,7 @@ Run compose command inside *repo folder* (sudo is probably required)
 docker-compose up
 ```
 
-Open `localhost:8080` and Walah :)
+Open `localhost:8080` and walah :)
 
 ### MySQL Access
 These are the database access data. These can be changed from *.yml* file.
