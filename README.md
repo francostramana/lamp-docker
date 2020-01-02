@@ -37,7 +37,7 @@ MYSQL_ROOT_PASSWORD: root
 
 For example, if you want to connect from PHP using PDO:
 
-```
+```php
 $this->db_connection = new PDO('mysql:host=mysqldb;dbname=db_name;charset=utf8', 'root', 'root');
 ```
 
